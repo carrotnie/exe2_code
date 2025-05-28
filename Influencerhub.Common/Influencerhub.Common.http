@@ -1,0 +1,6 @@
+@Influencerhub.Common_HostAddress = http://localhost:5174
+
+GET {{Influencerhub.Common_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

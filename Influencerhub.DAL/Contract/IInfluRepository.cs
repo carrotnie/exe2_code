@@ -1,0 +1,13 @@
+﻿using Influencerhub.DAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Influencerhub.DAL.Contract
+{
+    public interface IInfluRepository
+    {
+        Task<Influ> CreateInflu(Influ influ, User user, List<string> linkmxh);
+        Task<Influ> UpdateInflu(Influ influ, User user, List<string> linkmxh);
+    }
+}
