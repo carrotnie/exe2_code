@@ -9,5 +9,6 @@ namespace Influencerhub.DAL.Contract
     {
         Task AddRange(IEnumerable<BusinessField> businessFields);
         Task RemoveRangeByBusinessId(Guid businessId);
+        Task<List<BusinessField>> GetByBusinessIdAsync(Guid businessId);
     }
 }

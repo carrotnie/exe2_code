@@ -54,5 +54,11 @@ namespace Influencerhub.API.Controllers
         {
             return await _fieldService.GetAllFieldsAsync();
         }
+
+        [HttpGet("get-all-field-of-business/{businessId}")]
+        public async Task<ResponseDTO> GetBusinessField([FromRoute] Guid businessId)
+        {
+            return await _fieldService.GetBusinessFieldAsync(businessId);
+        }
     }
 }

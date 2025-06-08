@@ -9,5 +9,10 @@ namespace Influencerhub.Services.Contract
 
         Task<ResponseDTO> UpdateInfluByUserId(Guid userId, InfluUpdateDTO influDto);
 
+        Task<ResponseDTO> SearchByName(string keyword);
+        Task<ResponseDTO> SearchByFieldName(string keyword);
+        Task<ResponseDTO> SearchByArea(string keyword);
+        Task<ResponseDTO> SearchByFollower(int? minFollower, int? maxFollower);
+        Task<ResponseDTO> GetAllInflu();
     }
 }

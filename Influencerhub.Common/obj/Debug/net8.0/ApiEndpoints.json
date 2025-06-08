@@ -1,5 +1,83 @@
 [
   {
+    "ContainingType": "Influencerhub.API.Controllers.AdminController",
+    "Method": "UpdateUserBlockedStatus",
+    "RelativePath": "api/admin/users/{userId}/block",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "isBlocked",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.AdminController",
+    "Method": "UpdateUserVerificationStatus",
+    "RelativePath": "api/admin/users/{userId}/verify-account",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "isVerified",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.AuthController",
+    "Method": "VerifyEmail",
+    "RelativePath": "api/Auth/verify-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "GetAll",
+    "RelativePath": "api/business/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Influencerhub.API.Controllers.BusinessController",
     "Method": "CreateBusiness",
     "RelativePath": "api/business/create",
@@ -11,6 +89,84 @@
         "Name": "dto",
         "Type": "Influencerhub.Common.DTO.BusinessDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "SearchByAddress",
+    "RelativePath": "api/business/search-by-address",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "SearchByField",
+    "RelativePath": "api/business/search-by-field",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fieldName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "SearchByName",
+    "RelativePath": "api/business/search-by-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -130,6 +286,32 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.FieldController",
+    "Method": "GetBusinessField",
+    "RelativePath": "api/field/get-all-field-of-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.FieldController",
     "Method": "GetFieldById",
     "RelativePath": "api/field/get-by-id/{id}",
     "HttpMethod": "GET",
@@ -212,6 +394,90 @@
     ]
   },
   {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "GetApplicantsByJob",
+    "RelativePath": "api/freelance-jobs/{jobId}/list-influencers-apply-job",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "ApplyForJob",
+    "RelativePath": "api/freelance-jobs/apply-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.ApplyJobDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "ApproveInfluencerForJob",
+    "RelativePath": "api/freelance-jobs/approve-influencer-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.ApproveInfluencerJobDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "ConfirmCompleteJob",
+    "RelativePath": "api/freelance-jobs/confirm-complete-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.ApproveInfluencerJobDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "GetAll",
+    "RelativePath": "api/influ/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Influencerhub.API.Controllers.InfluController",
     "Method": "CreateInflu",
     "RelativePath": "api/influ/create",
@@ -223,6 +489,115 @@
         "Name": "influ",
         "Type": "Influencerhub.Common.DTO.InfluDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "SearchByArea",
+    "RelativePath": "api/influ/search-by-area",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "SearchByFieldName",
+    "RelativePath": "api/influ/search-by-field",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "SearchByFollower",
+    "RelativePath": "api/influ/search-by-follower",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minFollower",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxFollower",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "SearchByName",
+    "RelativePath": "api/influ/search-by-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -267,6 +642,637 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetAvailableJobs",
+    "RelativePath": "api/job-status/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetAvailableJobsByBusiness",
+    "RelativePath": "api/job-status/available/by-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetCancelJobs",
+    "RelativePath": "api/job-status/cancel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetCancelJobsByBusiness",
+    "RelativePath": "api/job-status/cancel/by-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetCompleteJobs",
+    "RelativePath": "api/job-status/complete",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetCompleteJobsByBusiness",
+    "RelativePath": "api/job-status/complete/by-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetInProgressJobs",
+    "RelativePath": "api/job-status/in-progress",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetInProgressJobsByBusiness",
+    "RelativePath": "api/job-status/in-progress/by-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetRegistrationExpiredJobs",
+    "RelativePath": "api/job-status/registration-expired",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobStatusController",
+    "Method": "GetRegistrationExpiredJobsByBusiness",
+    "RelativePath": "api/job-status/registration-expired/by-business/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "UpdateJobStatus",
+    "RelativePath": "api/jobs/{id}/update-status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.UpdateJobStatusDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "Add",
+    "RelativePath": "api/jobs/add-job",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobDto",
+        "Type": "Influencerhub.Common.DTO.JobDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "DeleteJob",
+    "RelativePath": "api/jobs/delete-job/{jobId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "FilterJobsByBudget",
+    "RelativePath": "api/jobs/filter/by-budget",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "minBudget",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "maxBudget",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "FilterJobsByLocation",
+    "RelativePath": "api/jobs/filter/by-location",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "location",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "FilterJobsByStartDate",
+    "RelativePath": "api/jobs/filter/by-start-date",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "GetAll",
+    "RelativePath": "api/jobs/get-all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "GetJobsByBusinessId",
+    "RelativePath": "api/jobs/get-job/by-business-id/{businessId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "GetJobsByBusinessField",
+    "RelativePath": "api/jobs/search/by-business-field/{businessFieldId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessFieldId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "GetJobsByBusinessName",
+    "RelativePath": "api/jobs/search/by-business-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "GetJobsByFieldName",
+    "RelativePath": "api/jobs/search/by-field-name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fieldName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsController",
+    "Method": "UpdateJob",
+    "RelativePath": "api/jobs/update-job/{jobId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "jobDto",
+        "Type": "Influencerhub.Common.DTO.UpdateJobDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipRegistrationController",
+    "Method": "RegisterMembership",
+    "RelativePath": "api/MembershipRegistration/register-membership",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Influencerhub.Common.DTO.RegisterMembershipRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipTypeController",
+    "Method": "GetAll",
+    "RelativePath": "api/MembershipType/Get-all-membershiptype",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipTypeController",
+    "Method": "GetBusiness",
+    "RelativePath": "api/MembershipType/Get-all-membershiptype-business",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipTypeController",
+    "Method": "GetKol",
+    "RelativePath": "api/MembershipType/Get-all-membershiptype-kol",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "BusinessReviewInflu",
+    "RelativePath": "api/review/business-review-influ",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.BusinessReviewCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "InfluReviewBusiness",
+    "RelativePath": "api/review/influ-review-business",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Influencerhub.Common.DTO.InfluReviewCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "GetRatingList",
+    "RelativePath": "api/review/rating-list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "isBusiness",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "GetReviewOfBusiness",
+    "RelativePath": "api/review/review-of-business/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "GetReviewOfInflu",
+    "RelativePath": "api/review/review-of-influ/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.TransactionController",
+    "Method": "GetAll",
+    "RelativePath": "api/transaction/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.TransactionController",
+    "Method": "ApproveTransaction",
+    "RelativePath": "api/transaction/approve/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.TransactionController",
+    "Method": "CancelTransaction",
+    "RelativePath": "api/transaction/cancel/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "reason",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.TransactionController",
+    "Method": "GetByUser",
+    "RelativePath": "api/transaction/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/user/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Influencerhub.Common.DTO.ForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.UserController",
@@ -319,6 +1325,38 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "Logout",
+    "RelativePath": "api/user/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Influencerhub.Common.DTO.LogoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/user/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Influencerhub.Common.DTO.ResetPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Influencerhub.Common.Controllers.WeatherForecastController",

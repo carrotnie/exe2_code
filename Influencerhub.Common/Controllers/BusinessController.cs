@@ -30,6 +30,29 @@ namespace Influencerhub.API.Controllers
         {
             return await _businessService.UpdateBusinessByUserId(userId, dto);
         }
+        [HttpGet("search-by-name")]
+        public async Task<ResponseDTO> SearchByName([FromQuery] string name)
+        {
+            return await _businessService.SearchBusinessByName(name);
+        }
+
+        [HttpGet("search-by-field")]
+        public async Task<ResponseDTO> SearchByField([FromQuery] string fieldName)
+        {
+            return await _businessService.SearchBusinessByField(fieldName);
+        }
+
+        [HttpGet("search-by-address")]
+        public async Task<ResponseDTO> SearchByAddress([FromQuery] string address)
+        {
+            return await _businessService.SearchBusinessByAddress(address);
+        }
+
+        [HttpGet("all")]
+        public async Task<ResponseDTO> GetAll()
+        {
+            return await _businessService.GetAllBusinesses();
+        }
 
     }
 }

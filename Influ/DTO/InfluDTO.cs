@@ -1,10 +1,6 @@
-﻿using System;
+﻿using Influencerhub.Common.Enum;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Influencerhub.Common.DTO
 {
@@ -16,7 +12,7 @@ namespace Influencerhub.Common.DTO
 
         // Thông tin Influencer
         public string Name { get; set; }
-        public string Gender { get; set; }
+        public InfluGender Gender { get; set; }
         public string? NickName { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? PhoneNumber { get; set; }
@@ -25,6 +21,7 @@ namespace Influencerhub.Common.DTO
         public string CCCD { get; set; }
         public string LinkImage { get; set; }
         public string? Portfolio_link { get; set; }
+        public string Area { get; set; } // <-- Thêm dòng này
 
         // Nhiều link mạng xã hội
         public List<string> Linkmxh { get; set; }
@@ -32,5 +29,4 @@ namespace Influencerhub.Common.DTO
         // Thêm danh sách FieldId
         public List<Guid> FieldIds { get; set; }
     }
-
 }

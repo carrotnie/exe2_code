@@ -11,7 +11,7 @@ namespace Influencerhub.DAL.Models
     public class Representative
     {
         [Key]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } 
         public Guid? BusinessId { get; set; }
         [ForeignKey(nameof(BusinessId))]
         public Business? Business { get; set; }

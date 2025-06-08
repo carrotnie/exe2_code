@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Influencerhub.Common.DTO;
-using Influencerhub.DAL.Models;
 
 namespace Influencerhub.Services.Contract
 {
     public interface IUserService
     {
-
         Task<ResponseDTO> Login(UserDTO DTO);
-
+        Task<ResponseDTO> Logout(Guid userId);
         Task<ResponseDTO> GenerateNewToken(string refreshToken);
+        Task<ResponseDTO> ForgotPassword(ForgotPasswordRequest request);
+        Task<ResponseDTO> ResetPassword(ResetPasswordRequest request);
 
+        // cập nhật trạng thái duyệt tài khoản
+        Task<ResponseDTO> UpdateUserVerificationStatus(Guid userId, bool isVerified);
+        Task<ResponseDTO> UpdateUserBlockedStatus(Guid userId, bool isBlocked);
     }
 }

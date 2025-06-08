@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.DAL.Enum
+namespace Influencerhub.Common.Enum
 {
     public enum FreelanceJobStatus
     {

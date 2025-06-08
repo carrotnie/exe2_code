@@ -11,10 +11,13 @@ namespace Influencerhub.DAL.Models
     public class Membership
     {
         [Key]
-        public Guid BusinessId { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } 
         public Guid? UserId { get; set; }
         [ForeignKey(nameof(UserId))]
         public User? User { get; set; }
+        public Guid? MembershipTypeId { get; set; }
+        [ForeignKey(nameof(MembershipTypeId))]
+        public MembershipType? MembershipType { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
 

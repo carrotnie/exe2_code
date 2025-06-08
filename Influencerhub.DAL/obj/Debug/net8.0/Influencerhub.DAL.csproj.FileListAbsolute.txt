@@ -15,3 +15,4 @@ D:\EXE2\Influencerhub.DAL\obj\Debug\net8.0\refint\Influencerhub.DAL.dll
 D:\EXE2\Influencerhub.DAL\obj\Debug\net8.0\Influencerhub.DAL.pdb
 D:\EXE2\Influencerhub.DAL\obj\Debug\net8.0\Influencerhub.DAL.genruntimeconfig.cache
 D:\EXE2\Influencerhub.DAL\obj\Debug\net8.0\ref\Influencerhub.DAL.dll
+D:\EXE2\Influencerhub.DAL\obj\Debug\net8.0\Influencerhub.DAL.sourcelink.json

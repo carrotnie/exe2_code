@@ -17,3 +17,4 @@ D:\EXE2\Influencerhub.Services\obj\Debug\net8.0\refint\Influencerhub.Services.dl
 D:\EXE2\Influencerhub.Services\obj\Debug\net8.0\Influencerhub.Services.pdb
 D:\EXE2\Influencerhub.Services\obj\Debug\net8.0\Influencerhub.Services.genruntimeconfig.cache
 D:\EXE2\Influencerhub.Services\obj\Debug\net8.0\ref\Influencerhub.Services.dll
+D:\EXE2\Influencerhub.Services\obj\Debug\net8.0\Influencerhub.Services.sourcelink.json

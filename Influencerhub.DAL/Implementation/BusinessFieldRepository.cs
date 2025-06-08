@@ -1,6 +1,7 @@
 ﻿using Influencerhub.DAL.Contract;
 using Influencerhub.DAL.Data;
 using Influencerhub.DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,13 @@ namespace Influencerhub.DAL.Implementation
             var fields = _context.BusinessFields.Where(bf => bf.BusinessId == businessId);
             _context.BusinessFields.RemoveRange(fields);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<BusinessField>> GetByBusinessIdAsync(Guid businessId)
+        {
+            return await _context.BusinessFields
+                .Where(bf => bf.BusinessId == businessId)
+                .ToListAsync();
         }
     }
 

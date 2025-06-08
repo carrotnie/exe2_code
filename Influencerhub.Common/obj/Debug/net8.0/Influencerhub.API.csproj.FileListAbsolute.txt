@@ -156,3 +156,5 @@ D:\EXE2\Influencerhub.Common\obj\Debug\net8.0\Influencerhub.API.pdb
 D:\EXE2\Influencerhub.Common\obj\Debug\net8.0\Influencerhub.API.genruntimeconfig.cache
 D:\EXE2\Influencerhub.Common\obj\Debug\net8.0\ref\Influencerhub.API.dll
 D:\EXE2\Influencerhub.Common\obj\Debug\net8.0\Influencerhub.API.MvcApplicationPartsAssemblyInfo.cs
+D:\EXE2\Influencerhub.Common\obj\Debug\net8.0\Influencerhub.API.sourcelink.json
+D:\EXE2\Influencerhub.Common\bin\Debug\net8.0\BCrypt.Net-Next.dll

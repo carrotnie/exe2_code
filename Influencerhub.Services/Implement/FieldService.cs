@@ -11,10 +11,12 @@ namespace Influencerhub.Services.Implementation
     public class FieldService : IFieldService
     {
         private readonly IFieldRepository _fieldRepository;
+        private readonly IBusinessFieldRepository _businessFieldRepository;
 
-        public FieldService(IFieldRepository fieldRepository)
+        public FieldService(IFieldRepository fieldRepository, IBusinessFieldRepository businessFieldRepository)
         {
             _fieldRepository = fieldRepository;
+            _businessFieldRepository = businessFieldRepository;
         }
 
         public async Task<ResponseDTO> CreateFieldAsync(FieldDTO dto)
@@ -128,7 +130,6 @@ namespace Influencerhub.Services.Implementation
             return response;
         }
 
-
         public async Task<ResponseDTO> GetAllFieldsAsync()
         {
             var response = new ResponseDTO();
@@ -143,6 +144,44 @@ namespace Influencerhub.Services.Implementation
             {
                 response.IsSuccess = false;
                 response.Message = "Lấy dữ liệu thất bại: " + ex.Message;
+            }
+            return response;
+        }
+
+        // HÀM CẦN CHỈNH SỬA
+        public async Task<ResponseDTO> GetBusinessFieldAsync(Guid businessId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                // Lấy tất cả các BusinessField của business này
+                var businessFields = await _businessFieldRepository.GetByBusinessIdAsync(businessId);
+                if (businessFields == null || businessFields.Count == 0)
+                {
+                    response.IsSuccess = true;
+                    response.Data = null;
+                    response.Message = "Doanh nghiệp này chưa liên kết lĩnh vực nào!";
+                    return response;
+                }
+
+                // Lấy danh sách fieldId từ BusinessField, loại bỏ null và ép sang Guid
+                var fieldIds = businessFields
+                    .Where(bf => bf.FieldId.HasValue)
+                    .Select(bf => bf.FieldId.Value)
+                    .Distinct()
+                    .ToList();
+
+                // Lấy thông tin field tương ứng
+                var fields = await _fieldRepository.GetByIdsAsync(fieldIds);
+
+                response.IsSuccess = true;
+                response.Data = fields;
+                response.Message = "Lấy danh sách lĩnh vực của business thành công!";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Lỗi khi lấy lĩnh vực của business: " + ex.Message;
             }
             return response;
         }

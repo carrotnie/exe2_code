@@ -12,3 +12,4 @@ D:\EXE2\Influ\obj\Debug\net8.0\refint\Influencerhub.Common.dll
 D:\EXE2\Influ\obj\Debug\net8.0\Influencerhub.Common.pdb
 D:\EXE2\Influ\obj\Debug\net8.0\Influencerhub.Common.genruntimeconfig.cache
 D:\EXE2\Influ\obj\Debug\net8.0\ref\Influencerhub.Common.dll
+D:\EXE2\Influ\obj\Debug\net8.0\Influencerhub.Common.sourcelink.json

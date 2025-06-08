@@ -1,4 +1,5 @@
 ﻿using Influencerhub.Common.DTO;
+using Influencerhub.Common.Enum;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,9 +8,9 @@ namespace Influencerhub.DAL.Models
     public class Review
     {
         [Key]
-        public Guid Id { get; set; } = Guid.NewGuid();
-        public Guid? FreelanceId { get; set; }
-        [ForeignKey(nameof(FreelanceId))]
+        public Guid Id { get; set; }
+        public Guid? InfluId { get; set; }
+        [ForeignKey(nameof(InfluId))]
         public Influ? Influ { get; set; }
         public Guid? BusinessId { get; set; }
         [ForeignKey(nameof(BusinessId))]
@@ -17,8 +18,10 @@ namespace Influencerhub.DAL.Models
         public Guid? JobId { get; set; }
         [ForeignKey(nameof(JobId))]
         public Job? Job { get; set; }
-        public string? feedback { get; set; } = null;
+        public string? Feedback { get; set; } = null;
         public float? Rating { get; set; } = null;
+
+        public ReviewType Type { get; set; }
 
     }
 }

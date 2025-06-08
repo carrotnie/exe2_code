@@ -11,7 +11,7 @@ namespace Influencerhub.DAL.Models
     public class FreelanceField
     {
         [Key]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
         public Guid? FreelanceId { get; set; }
         [ForeignKey(nameof(FreelanceId))]
         public Influ? Influ { get; set; }

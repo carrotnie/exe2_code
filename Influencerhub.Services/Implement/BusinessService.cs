@@ -17,6 +17,7 @@ namespace Influencerhub.Services.Implementation
         private readonly IUserRepository _userRepository;
         private readonly IBusinessFieldRepository _businessFieldRepository;
         private readonly IRepresentativeRepository _representativeRepository;
+        private readonly IEmailVerificationService _emailVerificationService;
         private readonly InfluencerhubDBContext _context;
 
         public BusinessService(
@@ -24,12 +25,14 @@ namespace Influencerhub.Services.Implementation
             IUserRepository userRepository,
             IBusinessFieldRepository businessFieldRepository,
             IRepresentativeRepository representativeRepository,
+            IEmailVerificationService emailVerificationService,
             InfluencerhubDBContext context)
         {
             _businessRepository = businessRepository;
             _userRepository = userRepository;
             _businessFieldRepository = businessFieldRepository;
             _representativeRepository = representativeRepository;
+            _emailVerificationService = emailVerificationService;
             _context = context;
         }
 
@@ -60,7 +63,14 @@ namespace Influencerhub.Services.Implementation
                 };
                 await _userRepository.Add(user);
 
-                // 3. Tạo Business
+                // 3. Gửi token xác thực email
+                Console.WriteLine("[DEBUG] Bắt đầu gửi mail xác thực cho: " + user.Email);
+                await _emailVerificationService.SendVerificationLinkAsync(user);
+                Console.WriteLine("[DEBUG] Đã xong hàm gửi mail xác thực.");
+
+
+
+                // 4. Tạo Business
                 var business = new Business
                 {
                     Id = Guid.NewGuid(),
@@ -71,9 +81,10 @@ namespace Influencerhub.Services.Implementation
                     BusinessLicense = dto.BusinessLicense,
                     Logo = dto.Logo
                 };
+
                 await _businessRepository.CreateBusiness(business);
 
-                // 4. Thêm các trường vào BusinessField
+                // 5. Thêm các trường vào BusinessField
                 if (dto.FieldIds != null && dto.FieldIds.Count > 0)
                 {
                     var businessFields = dto.FieldIds.Select(fieldId => new BusinessField
@@ -86,7 +97,7 @@ namespace Influencerhub.Services.Implementation
                     await _businessFieldRepository.AddRange(businessFields);
                 }
 
-                // 5. Thêm Representative
+                // 6. Thêm Representative
                 var rep = new Representative
                 {
                     Id = Guid.NewGuid(),
@@ -138,6 +149,10 @@ namespace Influencerhub.Services.Implementation
                     {
                         user.Email = dto.Email;
                         await _userRepository.Update(user);
+
+                        // Nếu update email, gửi lại token xác thực email mới
+                        await _emailVerificationService.SendVerificationLinkAsync(user);
+
                     }
                 }
 
@@ -202,6 +217,77 @@ namespace Influencerhub.Services.Implementation
             return response;
         }
 
+        public async Task<ResponseDTO> SearchBusinessByName(string name)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _businessRepository.GetBusinessesByNameAsync(name);
+                response.IsSuccess = true;
+                response.Data = result;
+                response.Message = "Tìm kiếm doanh nghiệp theo tên thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> SearchBusinessByField(string fieldName)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _businessRepository.GetBusinessesByFieldNameAsync(fieldName);
+                response.IsSuccess = true;
+                response.Data = result;
+                response.Message = "Tìm kiếm doanh nghiệp theo lĩnh vực thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> SearchBusinessByAddress(string address)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _businessRepository.GetBusinessesByAddressAsync(address);
+                response.IsSuccess = true;
+                response.Data = result;
+                response.Message = "Tìm kiếm doanh nghiệp theo địa chỉ thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetAllBusinesses()
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _businessRepository.GetAllBusinessesAsync();
+                response.IsSuccess = true;
+                response.Data = result;
+                response.Message = "Lấy danh sách doanh nghiệp thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
 
     }
 }

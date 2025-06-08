@@ -11,8 +11,8 @@ namespace Influencerhub.Common.DTO
         public string? Bio { get; set; }
         public string? LinkImage { get; set; }
         public string? Portfolio_link { get; set; }
+        public string Area { get; set; } 
         public List<string> Linkmxh { get; set; }
         public List<Guid> FieldIds { get; set; }
-
     }
 }

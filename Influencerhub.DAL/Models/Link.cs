@@ -11,7 +11,7 @@ namespace Influencerhub.DAL.Models
     public class Link
     {
         [Key]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } 
         public Guid? InfluId { get; set; }
 
         [ForeignKey(nameof(InfluId))]

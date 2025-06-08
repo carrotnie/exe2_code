@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.DAL.Enum
+namespace Influencerhub.Common.Enum
 {
-    public enum PremiumType
+    public enum TransactionStatus
     {
-        Free = 0,
-        Month = 1,
-        Year = 2
+        Unpaid = 0,
+        Paid = 1,
+        Failed = 2
     }
 }

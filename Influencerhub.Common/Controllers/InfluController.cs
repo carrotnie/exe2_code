@@ -3,6 +3,7 @@ using Influencerhub.Common.DTO;
 using Influencerhub.Services.Contract;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Influencerhub.Services.Implementation;
 
 namespace Influencerhub.API.Controllers
 {
@@ -28,6 +29,36 @@ namespace Influencerhub.API.Controllers
         public async Task<ResponseDTO> UpdateInfluByUserId([FromRoute] Guid userId, [FromBody] InfluUpdateDTO influ)
         {
             return await _influService.UpdateInfluByUserId(userId, influ);
+        }
+
+        [HttpGet("search-by-name")]
+        public async Task<ResponseDTO> SearchByName([FromQuery] string keyword)
+        {
+            return await _influService.SearchByName(keyword);
+        }
+
+        [HttpGet("search-by-field")]
+        public async Task<ResponseDTO> SearchByFieldName([FromQuery] string keyword)
+        {
+            return await _influService.SearchByFieldName(keyword);
+        }
+
+        [HttpGet("search-by-area")]
+        public async Task<ResponseDTO> SearchByArea([FromQuery] string keyword)
+        {
+            return await _influService.SearchByArea(keyword);
+        }
+
+        [HttpGet("search-by-follower")]
+        public async Task<ResponseDTO> SearchByFollower([FromQuery] int? minFollower, [FromQuery] int? maxFollower)
+        {
+            return await _influService.SearchByFollower(minFollower, maxFollower);
+        }
+
+        [HttpGet("all")]
+        public async Task<ResponseDTO> GetAll()
+        {
+            return await _influService.GetAllInflu();
         }
 
     }

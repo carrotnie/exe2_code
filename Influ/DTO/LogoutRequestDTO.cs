@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Messenger.DAL.Enum
+namespace Influencerhub.Common.DTO
 {
-    public enum TransactionStatus
+    public class LogoutRequest
     {
-        Unpaid = 0,
-        Paid = 1,
-        Failed = 2
+        public Guid UserId { get; set; }
     }
+
 }

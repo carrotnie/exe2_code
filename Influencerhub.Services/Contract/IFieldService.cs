@@ -12,5 +12,7 @@ namespace Influencerhub.Services.Contract
         Task<ResponseDTO> GetFieldByIdAsync(Guid id);
         Task<ResponseDTO> GetFieldsByNameAsync(string name); // trả về nhiều kết quả
         Task<ResponseDTO> GetAllFieldsAsync();
+
+        Task<ResponseDTO> GetBusinessFieldAsync(Guid businessId);
     }
 }

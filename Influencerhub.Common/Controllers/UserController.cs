@@ -30,5 +30,31 @@ namespace Influencerhub.API.Controllers
         {
             return await _userService.GenerateNewToken(refreshToken);
         }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
+        {
+            var result = await _userService.ForgotPassword(request);
+            if (!result.IsSuccess)
+                return BadRequest(result);
+
+            return Ok(result);
+        }
+
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
+        {
+            var result = await _userService.ResetPassword(request);
+            return Ok(result);
+        }
+
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout([FromBody] LogoutRequest request)
+        {
+            var result = await _userService.Logout(request.UserId);
+            return Ok(result);
+        }
+
     }
 }

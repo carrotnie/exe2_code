@@ -5,6 +5,7 @@ using Influencerhub.DAL.Data;
 using Influencerhub.DAL.Implementation;
 using Influencerhub.DAL.Repository;
 using Influencerhub.Services.Contract;
+using Influencerhub.Services.Implement;
 using Influencerhub.Services.Implementation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -46,6 +47,13 @@ builder.Services.AddScoped<IFieldRepository, FieldRepository>();
 builder.Services.AddScoped<IBusinessRepository, BusinessRepository>();
 builder.Services.AddScoped<IBusinessFieldRepository, BusinessFieldRepository>();
 builder.Services.AddScoped<IRepresentativeRepository, RepresentativeRepository>();
+builder.Services.AddScoped<IJobRepository, JobRepository>();
+builder.Services.AddScoped<IFreelanceJobRepository, FreelanceJobRepository>();
+builder.Services.AddScoped<IMembershipTypeRepository, MembershipTypeRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+
+
 
 
 // Đăng ký Service
@@ -54,6 +62,16 @@ builder.Services.AddScoped<IInfluService, InfluService>();
 builder.Services.AddScoped<IJWTService, JWTService>();
 builder.Services.AddScoped<IFieldService, FieldService>();
 builder.Services.AddScoped<IBusinessService, BusinessService>();
+builder.Services.AddScoped<IEmailVerificationService, EmailVerificationService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IJobService, JobService>();
+builder.Services.AddHostedService<JobStatusCheckerService>();
+builder.Services.AddScoped<IFreelanceJobService, FreelanceJobService>();
+builder.Services.AddScoped<IMembershipTypeService, MembershipTypeService>();
+builder.Services.AddScoped<IMembershipRegistrationService, MembershipRegistrationService>();
+builder.Services.AddScoped<ITransactionService, TransactionService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+
 
 // Cấu hình API Controller
 builder.Services.AddControllers();
