@@ -1,5 +1,6 @@
 ﻿using Influencerhub.Common.DTO;
 using Influencerhub.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,7 @@ namespace Influencerhub.API.Controllers
             _service = service;
         }
 
+        [AllowAnonymous]
         [HttpPost("register-membership")]
         public async Task<IActionResult> RegisterMembership([FromBody] RegisterMembershipRequest request)
         {

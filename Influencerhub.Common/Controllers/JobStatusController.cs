@@ -1,5 +1,6 @@
 ﻿using Influencerhub.Common.Enum;
 using Influencerhub.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ public class JobStatusController : ControllerBase
         _jobService = jobService;
     }
 
+    [AllowAnonymous]
     [HttpGet("available")]
     public async Task<IActionResult> GetAvailableJobs()
     {
@@ -21,6 +23,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("in-progress")]
     public async Task<IActionResult> GetInProgressJobs()
     {
@@ -28,6 +31,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("complete")]
     public async Task<IActionResult> GetCompleteJobs()
     {
@@ -35,6 +39,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("cancel")]
     public async Task<IActionResult> GetCancelJobs()
     {
@@ -42,6 +47,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("registration-expired")]
     public async Task<IActionResult> GetRegistrationExpiredJobs()
     {
@@ -49,6 +55,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("available/by-business/{businessId}")]
     public async Task<IActionResult> GetAvailableJobsByBusiness(Guid businessId)
     {
@@ -56,6 +63,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("in-progress/by-business/{businessId}")]
     public async Task<IActionResult> GetInProgressJobsByBusiness(Guid businessId)
     {
@@ -63,6 +71,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("complete/by-business/{businessId}")]
     public async Task<IActionResult> GetCompleteJobsByBusiness(Guid businessId)
     {
@@ -70,6 +79,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("cancel/by-business/{businessId}")]
     public async Task<IActionResult> GetCancelJobsByBusiness(Guid businessId)
     {
@@ -77,6 +87,7 @@ public class JobStatusController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("registration-expired/by-business/{businessId}")]
     public async Task<IActionResult> GetRegistrationExpiredJobsByBusiness(Guid businessId)
     {

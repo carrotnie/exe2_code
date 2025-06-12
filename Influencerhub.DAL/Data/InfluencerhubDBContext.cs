@@ -13,6 +13,7 @@ namespace Influencerhub.DAL.Data
     public class InfluencerhubDBContext : DbContext
     {
         public InfluencerhubDBContext() { }
+        public InfluencerhubDBContext(DbContextOptions<InfluencerhubDBContext> options) : base(options) { }
         public DbSet<Models.User> Users { get; set; } = null!;
         public DbSet<Models.Role> Roles { get; set; } = null!;
         public DbSet<Models.Influ> Influs { get; set; } = null!;
@@ -28,10 +29,18 @@ namespace Influencerhub.DAL.Data
         public DbSet<Models.Review> Reviews { get; set; } = null!;
         public DbSet<Models.Transaction> Transactions { get; set; } = null!;
         public DbSet<Models.Link> Links { get; set; } = null!;
+        public DbSet<Models.Conversation> Conversations { get; set; } = null!;
+        public DbSet<Models.ConversationPartners> ConversationPartners { get; set; } = null!;
+        public DbSet<Models.Message> Messages { get; set; } = null!;
+        public DbSet<Models.PartnerShip> PartnerShips { get; set; } = null!;
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=DESKTOP-J0IBK4L\\TUT;database=InfluencerhubDB;uid=sa;pwd=12345;TrustServerCertificate=True;MultipleActiveResultSets=True;");
         }
+
+
+
     }
 }

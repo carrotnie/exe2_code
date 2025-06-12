@@ -2,9 +2,11 @@
 using Influencerhub.Services.Contract;
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Influencerhub.API.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/admin")]
     public class AdminController : ControllerBase
@@ -16,6 +18,7 @@ namespace Influencerhub.API.Controllers
             _userService = userService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("users/{userId}/verify-account")]
         public async Task<IActionResult> UpdateUserVerificationStatus(Guid userId, [FromQuery] bool isVerified)
         {
@@ -25,6 +28,7 @@ namespace Influencerhub.API.Controllers
             return BadRequest(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("users/{userId}/block")]
         public async Task<IActionResult> UpdateUserBlockedStatus(Guid userId, [FromQuery] bool isBlocked)
         {

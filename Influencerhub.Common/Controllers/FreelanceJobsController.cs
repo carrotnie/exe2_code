@@ -1,5 +1,6 @@
 ﻿using Influencerhub.Common.DTO;
 using Influencerhub.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ public class FreelanceJobsController : ControllerBase
         _freelanceJobService = freelanceJobService;
     }
 
+    [Authorize(Roles = "Freelancer")]
     [HttpPost("apply-job")]
     public async Task<IActionResult> ApplyForJob([FromBody] ApplyJobDTO dto)
     {
@@ -22,6 +24,7 @@ public class FreelanceJobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpGet("{jobId}/list-influencers-apply-job")]
     public async Task<IActionResult> GetApplicantsByJob(Guid jobId)
     {
@@ -29,6 +32,7 @@ public class FreelanceJobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpPost("approve-influencer-job")]
     public async Task<IActionResult> ApproveInfluencerForJob([FromBody] ApproveInfluencerJobDTO dto)
     {
@@ -36,6 +40,7 @@ public class FreelanceJobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpPost("confirm-complete-job")]
     public async Task<IActionResult> ConfirmCompleteJob([FromBody] ApproveInfluencerJobDTO dto)
     {

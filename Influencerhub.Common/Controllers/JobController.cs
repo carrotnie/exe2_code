@@ -1,6 +1,7 @@
 ﻿using Influencerhub.Common.DTO;
 using Influencerhub.Common.Enum;
 using Influencerhub.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ public class JobsController : ControllerBase
         _jobService = jobService;
     }
 
+    [AllowAnonymous]
     [HttpGet("get-all")]
     public async Task<IActionResult> GetAll()
     {
@@ -23,6 +25,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpPost("add-job")]
     public async Task<IActionResult> Add([FromBody] JobDTO jobDto)
     {
@@ -30,6 +33,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpPut("update-job/{jobId}")]
     public async Task<IActionResult> UpdateJob(Guid jobId, [FromBody] UpdateJobDTO jobDto)
     {
@@ -37,6 +41,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Business")]
     [HttpDelete("delete-job/{jobId}")]
     public async Task<IActionResult> DeleteJob(Guid jobId)
     {
@@ -44,6 +49,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("search/by-business-name")]
     public async Task<IActionResult> GetJobsByBusinessName([FromQuery] string businessName)
     {
@@ -51,6 +57,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("search/by-business-field/{businessFieldId}")]
     public async Task<IActionResult> GetJobsByBusinessField(Guid businessFieldId)
     {
@@ -58,6 +65,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("filter/by-location")]
     public async Task<IActionResult> FilterJobsByLocation([FromQuery] string location)
     {
@@ -65,6 +73,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("filter/by-budget")]
     public async Task<IActionResult> FilterJobsByBudget([FromQuery] decimal minBudget, [FromQuery] decimal maxBudget)
     {
@@ -72,6 +81,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("search/by-field-name")]
     public async Task<IActionResult> GetJobsByFieldName([FromQuery] string fieldName)
     {
@@ -79,6 +89,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("filter/by-start-date")]
     public async Task<IActionResult> FilterJobsByStartDate([FromQuery] DateTime fromDate)
     {
@@ -87,6 +98,7 @@ public class JobsController : ControllerBase
     }
 
 
+    [Authorize(Roles = "Business")]
     [HttpPatch("{id}/update-status")]
     public async Task<IActionResult> UpdateJobStatus(Guid id, [FromBody] UpdateJobStatusDTO dto)
     {
@@ -94,6 +106,7 @@ public class JobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
     [HttpGet("get-job/by-business-id/{businessId}")]
     public async Task<IActionResult> GetJobsByBusinessId(Guid businessId)
     {

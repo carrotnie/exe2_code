@@ -23,6 +23,7 @@ namespace Influencerhub.Services.Implementation
         }
         public string GenerateAccessToken(User user)
         {
+            Console.WriteLine("Key when signing: " + _configuration["JwtSettings:SecretKey"]);
             var claims = new List<Claim>
     {
         new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),

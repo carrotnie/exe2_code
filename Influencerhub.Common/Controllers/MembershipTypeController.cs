@@ -1,5 +1,6 @@
 ﻿using Influencerhub.Common.DTO;
 using Influencerhub.Services.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,7 @@ namespace Influencerhub.API.Controllers
             _service = service;
         }
 
+        [AllowAnonymous]
         [HttpGet("Get-all-membershiptype")]
         public async Task<IActionResult> GetAll()
         {
@@ -23,6 +25,7 @@ namespace Influencerhub.API.Controllers
             return Ok(data);
         }
 
+        [AllowAnonymous]
         [HttpGet("Get-all-membershiptype-business")]
         public async Task<IActionResult> GetBusiness()
         {
@@ -30,6 +33,7 @@ namespace Influencerhub.API.Controllers
             return Ok(data);
         }
 
+        [AllowAnonymous]
         [HttpGet("Get-all-membershiptype-kol")]
         public async Task<IActionResult> GetKol()
         {

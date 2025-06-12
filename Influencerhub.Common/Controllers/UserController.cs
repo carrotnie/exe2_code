@@ -16,7 +16,7 @@ namespace Influencerhub.API.Controllers
         {
             _userService = userService;
         }
-        //[Authorize(Roles = "User,Admin")]
+
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ResponseDTO> Login(UserDTO login)
@@ -24,13 +24,14 @@ namespace Influencerhub.API.Controllers
             return await _userService.Login(login);
         }
 
-
+        [AllowAnonymous]
         [HttpPost("get-new-token")]
         public async Task<ResponseDTO> GenerateNewToken(string refreshToken)
         {
             return await _userService.GenerateNewToken(refreshToken);
         }
 
+        [AllowAnonymous]
         [HttpPost("forgot-password")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
         {
@@ -41,7 +42,7 @@ namespace Influencerhub.API.Controllers
             return Ok(result);
         }
 
-
+        [AllowAnonymous]
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequest request)
         {
@@ -49,6 +50,7 @@ namespace Influencerhub.API.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
         [HttpPost("logout")]
         public async Task<IActionResult> Logout([FromBody] LogoutRequest request)
         {
