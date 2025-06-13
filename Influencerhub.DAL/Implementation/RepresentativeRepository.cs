@@ -35,6 +35,12 @@ namespace Influencerhub.DAL.Implementation
             _context.Representatives.Update(rep);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Representative?> GetRepresentativeByBusinessId(Guid businessId)
+        {
+            return await _context.Representatives
+                .FirstOrDefaultAsync(r => r.BusinessId == businessId);
+        }
     }
 
 }

@@ -59,6 +59,58 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "GetRepresentativeByBusinessId",
+    "RelativePath": "api/business/{businessId}/representative",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "businessId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "GetBusinessById",
+    "RelativePath": "api/business/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
     "Method": "GetAll",
     "RelativePath": "api/business/all",
     "HttpMethod": "GET",

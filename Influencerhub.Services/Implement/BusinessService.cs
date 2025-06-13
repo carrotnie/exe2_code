@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Influencerhub.DAL.Data;
+using Influencerhub.Common.Enum;
 
 namespace Influencerhub.Services.Implementation
 {
@@ -288,6 +289,57 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
+
+        public async Task<ResponseDTO> GetBusinessById(Guid businessId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var business = await _businessRepository.GetBusinessById(businessId);
+                if (business == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Không tìm thấy doanh nghiệp";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Message = "Lấy thông tin doanh nghiệp thành công";
+                response.Data = business;
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Có lỗi xảy ra: " + ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetRepresentativeByBusinessId(Guid businessId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var representative = await _representativeRepository.GetRepresentativeByBusinessId(businessId);
+                if (representative == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Không tìm thấy representative của doanh nghiệp này";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Message = "Lấy thông tin representative thành công";
+                response.Data = representative;
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Có lỗi xảy ra: " + ex.Message;
+            }
+            return response;
+        }
+
 
     }
 }

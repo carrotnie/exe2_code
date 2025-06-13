@@ -13,6 +13,7 @@ namespace Influencerhub.DAL.Contract
         Task<List<Business>> GetBusinessesByFieldNameAsync(string fieldName);
         Task<List<Business>> GetBusinessesByAddressAsync(string address);
         Task<List<Business>> GetAllBusinessesAsync();
+        Task<Business?> GetBusinessById(Guid businessId);
 
     }
 }

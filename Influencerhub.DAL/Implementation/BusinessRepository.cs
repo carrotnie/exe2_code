@@ -62,5 +62,12 @@ namespace Influencerhub.DAL.Implementation
             return await _context.Businesses.ToListAsync();
         }
 
+        public async Task<Business?> GetBusinessById(Guid businessId)
+        {
+            return await _context.Businesses
+                .FirstOrDefaultAsync(b => b.Id == businessId);
+        }
+
+
     }
 }

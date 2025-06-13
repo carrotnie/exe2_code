@@ -15,6 +15,8 @@ namespace Influencerhub.Services.Contract
         Task<ResponseDTO> SearchBusinessByField(string fieldName);
         Task<ResponseDTO> SearchBusinessByAddress(string address);
         Task<ResponseDTO> GetAllBusinesses();
+        Task<ResponseDTO> GetBusinessById(Guid businessId);
+        Task<ResponseDTO> GetRepresentativeByBusinessId(Guid businessId);
 
     }
 }

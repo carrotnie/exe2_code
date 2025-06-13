@@ -62,5 +62,18 @@ namespace Influencerhub.API.Controllers
             return await _businessService.GetAllBusinesses();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ResponseDTO> GetBusinessById([FromRoute] Guid id)
+        {
+            return await _businessService.GetBusinessById(id);
+        }
+
+        [HttpGet("{businessId}/representative")]
+        public async Task<ResponseDTO> GetRepresentativeByBusinessId([FromRoute] Guid businessId)
+        {
+            return await _businessService.GetRepresentativeByBusinessId(businessId);
+        }
+
+
     }
 }

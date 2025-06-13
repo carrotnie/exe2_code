@@ -9,5 +9,6 @@ namespace Influencerhub.DAL.Contract
         Task<Representative> Add(Representative rep);
         Task<Representative?> GetByBusinessId(Guid businessId);
         Task Update(Representative rep);
+        Task<Representative?> GetRepresentativeByBusinessId(Guid businessId);
     }
 }
