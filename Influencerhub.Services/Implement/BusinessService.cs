@@ -340,6 +340,31 @@ namespace Influencerhub.Services.Implementation
             return response;
         }
 
+        public async Task<ResponseDTO> GetBusinessByUserId(Guid userId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var business = await _businessRepository.GetBusinessByUserId(userId);
+                if (business == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Không tìm thấy doanh nghiệp với UserId đã cho";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Message = "Lấy thông tin doanh nghiệp thành công";
+                response.Data = business;
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = "Có lỗi xảy ra: " + ex.Message;
+            }
+            return response;
+        }
+
 
     }
 }

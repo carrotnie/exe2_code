@@ -68,6 +68,11 @@ namespace Influencerhub.DAL.Implementation
                 .FirstOrDefaultAsync(b => b.Id == businessId);
         }
 
+        public async Task<Business?> GetBusinessByUserId(Guid userId)
+        {
+            return await _context.Businesses.FirstOrDefaultAsync(b => b.UserId == userId);
+        }
+
 
     }
 }

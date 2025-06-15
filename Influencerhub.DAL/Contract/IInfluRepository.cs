@@ -14,5 +14,8 @@ namespace Influencerhub.DAL.Contract
         Task<List<Influ>> SearchByArea(string keyword);
         Task<List<Influ>> SearchByFollower(int? minFollower, int? maxFollower);
         Task<List<Influ>> GetAllInflu();
+        Task<Influ?> GetById(Guid influId);
+        Task<Influ?> GetByUserId(Guid userId);
+
     }
 }

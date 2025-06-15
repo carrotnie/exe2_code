@@ -67,5 +67,19 @@ namespace Influencerhub.API.Controllers
             return await _influService.GetAllInflu();
         }
 
+        [AllowAnonymous]
+        [HttpGet("get-influ-by-id/{influId}")]
+        public async Task<ResponseDTO> GetById([FromRoute] Guid influId)
+        {
+            return await _influService.GetById(influId);
+        }
+
+        [AllowAnonymous]
+        [HttpGet("get-influ-by-userId/{userId}")]
+        public async Task<ResponseDTO> GetByUserId([FromRoute] Guid userId)
+        {
+            return await _influService.GetByUserId(userId);
+        }
+
     }
 }

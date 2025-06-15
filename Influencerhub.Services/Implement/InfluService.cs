@@ -283,5 +283,56 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
+
+        public async Task<ResponseDTO> GetById(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var influ = await _influRepository.GetById(influId);
+                if (influ == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Không tìm thấy Influencer theo ID.";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Data = influ;
+                response.Message = "Lấy dữ liệu Influencer thành công.";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetByUserId(Guid userId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var influ = await _influRepository.GetByUserId(userId);
+                if (influ == null)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Không tìm thấy Influencer theo UserID.";
+                    return response;
+                }
+
+                response.IsSuccess = true;
+                response.Data = influ;
+                response.Message = "Lấy dữ liệu Influencer thành công.";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
     }
 }

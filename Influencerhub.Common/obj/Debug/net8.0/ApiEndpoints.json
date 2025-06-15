@@ -85,32 +85,6 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.BusinessController",
-    "Method": "GetBusinessById",
-    "RelativePath": "api/business/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Influencerhub.Common.DTO.ResponseDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
     "Method": "GetAll",
     "RelativePath": "api/business/all",
     "HttpMethod": "GET",
@@ -140,6 +114,58 @@
       {
         "Name": "dto",
         "Type": "Influencerhub.Common.DTO.BusinessDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "GetBusinessById",
+    "RelativePath": "api/business/get-business-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.BusinessController",
+    "Method": "GetBusinessByUserId",
+    "RelativePath": "api/business/get-business-by-user-id/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -736,6 +762,58 @@
       {
         "Name": "influ",
         "Type": "Influencerhub.Common.DTO.InfluDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "GetById",
+    "RelativePath": "api/influ/get-influ-by-id/{influId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.InfluController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/influ/get-influ-by-userId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

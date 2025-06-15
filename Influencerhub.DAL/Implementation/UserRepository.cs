@@ -82,5 +82,15 @@ namespace Influencerhub.DAL.Implementation
             return user;
         }
 
+        public async Task<Influ?> GetInfluByUserId(Guid userId)
+        {
+            return await _context.Influs.FirstOrDefaultAsync(i => i.UserId == userId);
+        }
+
+        public async Task<Business?> GetBusinessByUserId(Guid userId)
+        {
+            return await _context.Businesses.FirstOrDefaultAsync(b => b.UserId == userId);
+        }
+
     }
 }

@@ -117,5 +117,16 @@ namespace Influencerhub.DAL.Implementation
             return await _context.Influs.ToListAsync();
         }
 
+        public async Task<Influ?> GetById(Guid influId)
+        {
+            return await _context.Influs.FirstOrDefaultAsync(i => i.InfluId == influId);
+        }
+
+        public async Task<Influ?> GetByUserId(Guid userId)
+        {
+            return await _context.Influs.FirstOrDefaultAsync(i => i.UserId == userId);
+        }
+
+
     }
 }

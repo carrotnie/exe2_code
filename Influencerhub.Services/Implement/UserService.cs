@@ -79,19 +79,21 @@ namespace Influencerhub.Services.Implementation
 
                 if (userDb != null)
                 {
-                    // *** KIỂM TRA ĐỦ 2 ĐIỀU KIỆN ***
+                    // Kiểm tra trạng thái tài khoản
                     if (!userDb.IsVerified)
                     {
                         responseDTO.IsSuccess = false;
                         responseDTO.Message = "Tài khoản của bạn chưa được admin phê duyệt!";
                         return responseDTO;
                     }
+
                     if (!userDb.IsEmailVerified)
                     {
                         responseDTO.IsSuccess = false;
                         responseDTO.Message = "Bạn chưa xác thực email!";
                         return responseDTO;
                     }
+
                     if (userDb.IsBlocked)
                     {
                         responseDTO.IsSuccess = false;
@@ -99,8 +101,7 @@ namespace Influencerhub.Services.Implementation
                         return responseDTO;
                     }
 
-
-                    // Kiểm tra role tồn tại chưa
+                    // Kiểm tra role
                     if (userDb.Role == null || string.IsNullOrEmpty(userDb.Role.Name))
                     {
                         responseDTO.BusinessCode = Influencerhub.Common.Enum.BusinessCode.NotFound;
@@ -109,18 +110,27 @@ namespace Influencerhub.Services.Implementation
                         return responseDTO;
                     }
 
-                    // Sinh refresh token và cập nhật thời gian hết hạn
+                    // Cập nhật refresh token
                     userDb.RefreshToken = _jwtService.GenerateRefreshToken();
                     userDb.ExpireTimeRefreshToken = DateTime.Now.AddDays(
                         double.Parse(_configuration["JwtSettings:RefreshTokenExpirationDays"]));
                     await _userRepository.Update(userDb);
 
-                    // Sinh access token (đảm bảo role đã có giá trị)
-                    responseDTO.Data = new TokenResponse
+                    // Lấy InfluId và BusinessId (nếu có)
+                    var influ = await _userRepository.GetInfluByUserId(userDb.UserId);
+                    var business = await _userRepository.GetBusinessByUserId(userDb.UserId);
+
+                    // Trả về dữ liệu
+                    responseDTO.Data = new LoginResponseDTO
                     {
                         AccessToken = _jwtService.GenerateAccessToken(userDb),
-                        RefreshToken = userDb.RefreshToken
+                        RefreshToken = userDb.RefreshToken,
+                        UserId = userDb.UserId,
+                        RoleId = userDb.RoleId,
+                        InfluId = influ?.InfluId,
+                        BusinessId = business?.Id
                     };
+
                     responseDTO.IsSuccess = true;
                     responseDTO.Message = "Đăng nhập thành công";
                 }
@@ -139,6 +149,7 @@ namespace Influencerhub.Services.Implementation
             }
             return responseDTO;
         }
+
 
 
         public async Task<ResponseDTO> ForgotPassword(ForgotPasswordRequest request)

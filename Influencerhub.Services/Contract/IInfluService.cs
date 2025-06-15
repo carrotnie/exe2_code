@@ -14,5 +14,8 @@ namespace Influencerhub.Services.Contract
         Task<ResponseDTO> SearchByArea(string keyword);
         Task<ResponseDTO> SearchByFollower(int? minFollower, int? maxFollower);
         Task<ResponseDTO> GetAllInflu();
+        Task<ResponseDTO> GetById(Guid influId);
+        Task<ResponseDTO> GetByUserId(Guid userId);
+
     }
 }

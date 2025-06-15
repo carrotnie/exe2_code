@@ -15,5 +15,8 @@ namespace Influencerhub.DAL.Contract
         Task<User> Add(User user);
         Task<User> GetByResetPasswordToken(string token);
         Task<User> UpdateBlockedStatus(Guid userId, bool isBlocked);
+        Task<Influ?> GetInfluByUserId(Guid userId);
+        Task<Business?> GetBusinessByUserId(Guid userId);
+
     }
 }
