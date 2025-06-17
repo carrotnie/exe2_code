@@ -3,32 +3,43 @@
   "WorkspaceRootPath": "D:\\EXE2\\Influ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\data\\influencerhubdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|d:\\exe2\\influ\\dto\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|solutionrelative:dto\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\fieldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\field.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\ifieldrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\businessfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\fieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\fieldrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\ijobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\ifieldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\jobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\influcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\influrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\iinflurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\influservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\iinfluservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\freelancefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\influ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,118 +58,174 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JobController.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\JobController.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\JobController.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\JobController.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\JobController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAA8wHUAAAAAAAAAAAAAAA==",
+              "Title": "InfluencerhubDBContext.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwCcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:46:50.133Z",
+              "WhenOpened": "2025-06-17T13:02:42.553Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "JobDTO.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influ\\DTO\\JobDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\JobDTO.cs",
-              "ToolTip": "D:\\EXE2\\Influ\\DTO\\JobDTO.cs",
-              "RelativeToolTip": "DTO\\JobDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Title": "FieldService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\FieldService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\FieldService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\FieldService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\FieldService.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAAMEAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:46:41.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Field.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Field.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Field.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Field.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Field.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:46:14.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BusinessField.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\BusinessField.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\BusinessField.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\BusinessField.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\BusinessField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:46:08.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Job.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Job.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Job.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Job.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Job.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:45:58.929Z",
+              "WhenOpened": "2025-06-17T12:56:06.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IJobRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IJobRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IJobRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IJobRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IJobRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Title": "IFieldService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFieldService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IFieldService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFieldService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IFieldService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:45:45.606Z",
+              "WhenOpened": "2025-06-17T12:55:57.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FieldRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\FieldRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\FieldRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\FieldRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\FieldRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:55:42.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IFieldRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IFieldRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IFieldRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IFieldRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IFieldRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:55:24.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FieldController.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\FieldController.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\FieldController.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\FieldController.cs",
+              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\FieldController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:55:01.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "JobRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\JobRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\JobRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\JobRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\JobRepository.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAuwJwAAAAAAAAAAAAAAA==",
+              "Title": "InfluController.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\InfluController.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\InfluController.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\InfluController.cs",
+              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\InfluController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAmwD8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:45:38.513Z",
+              "WhenOpened": "2025-06-17T12:54:00.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IJobService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IJobService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IJobService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IJobService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IJobService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "InfluRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\InfluRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\InfluRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\InfluRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\InfluRepository.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:45:30.092Z",
+              "WhenOpened": "2025-06-17T12:53:51.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "JobService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\JobService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\JobService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\JobService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\JobService.cs",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAYwDMBAAAAAAAAAAAAAA==",
+              "Title": "IInfluRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IInfluRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IInfluRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IInfluRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IInfluRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T14:45:14.25Z",
+              "WhenOpened": "2025-06-17T12:53:40.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "InfluService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\InfluService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\InfluService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\InfluService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\InfluService.cs",
+              "ViewState": "AgIAACgBAAAAAAAAAAAkwFIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:53:31.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IInfluService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IInfluService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IInfluService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IInfluService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IInfluService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:53:15.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FreelanceField.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceField.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\FreelanceField.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceField.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\FreelanceField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:53:05.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Influ.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Influ.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Influ.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Influ.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Influ.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T12:52:57.392Z",
               "EditorCaption": ""
             }
           ]

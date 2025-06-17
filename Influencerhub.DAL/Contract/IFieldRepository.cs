@@ -16,6 +16,7 @@ namespace Influencerhub.DAL.Contract
         Task<List<Field>> GetByNameContainsAsync(string name);
         Task<List<Field>> GetAllAsync();
         Task<List<Field>> GetByIdsAsync(List<Guid> ids);
+        Task<List<Field>> GetFieldsByInfluId(Guid influId);
 
 
     }

@@ -12,11 +12,13 @@ namespace Influencerhub.Services.Implementation
     {
         private readonly IFieldRepository _fieldRepository;
         private readonly IBusinessFieldRepository _businessFieldRepository;
+        private readonly IInfluRepository _influRepository;
 
-        public FieldService(IFieldRepository fieldRepository, IBusinessFieldRepository businessFieldRepository)
+        public FieldService(IFieldRepository fieldRepository, IBusinessFieldRepository businessFieldRepository, IInfluRepository influRepository)
         {
             _fieldRepository = fieldRepository;
             _businessFieldRepository = businessFieldRepository;
+            _influRepository = influRepository;
         }
 
         public async Task<ResponseDTO> CreateFieldAsync(FieldDTO dto)
@@ -147,8 +149,6 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
-
-        // HÀM CẦN CHỈNH SỬA
         public async Task<ResponseDTO> GetBusinessFieldAsync(Guid businessId)
         {
             var response = new ResponseDTO();
@@ -185,5 +185,25 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
+
+        public async Task<ResponseDTO> GetFieldsByInfluId(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var fields = await _fieldRepository.GetFieldsByInfluId(influId); 
+                response.IsSuccess = true;
+                response.Data = fields;
+                response.Message = "Lấy danh sách lĩnh vực thành công!";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+
     }
 }

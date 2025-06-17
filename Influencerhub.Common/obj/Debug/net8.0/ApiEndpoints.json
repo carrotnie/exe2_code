@@ -586,6 +586,32 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.FieldController",
+    "Method": "GetFieldsByInfluId",
+    "RelativePath": "api/field/get-all-field-of-influ/{influId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.FieldController",
     "Method": "GetFieldById",
     "RelativePath": "api/field/get-by-id/{id}",
     "HttpMethod": "GET",

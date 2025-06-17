@@ -126,17 +126,13 @@ var app = builder.Build();
 // 3. CONFIGURE MIDDLEWARE PIPELINE
 
 app.UseRouting();
-
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Influencerhub API v1");
-    });
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Influencerhub API v1");
+});
 
-    app.UseStaticFiles();
-}
+app.UseStaticFiles();
 
 app.UseCors("AllowLocalhost");
 

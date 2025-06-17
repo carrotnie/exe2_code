@@ -63,6 +63,16 @@ namespace Influencerhub.DAL.Repository
             return await _context.Fields.Where(f => ids.Contains(f.Id)).ToListAsync();
         }
 
+        public async Task<List<Field>> GetFieldsByInfluId(Guid influId)
+        {
+            var fields = await (from f in _context.Fields
+                                join ff in _context.FreelanceFields on f.Id equals ff.FieldId
+                                where ff.FreelanceId == influId
+                                select f).ToListAsync();
+
+            return fields;
+        }
+
 
     }
 }
