@@ -1,4 +1,5 @@
-﻿using Influencerhub.DAL.Models;
+﻿using Influencerhub.Common.Enum;
+using Influencerhub.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ namespace Influencerhub.DAL.Contract
         Task<FreelanceJob> Add(FreelanceJob entity);
         Task<List<FreelanceJob>> GetByJobId(Guid jobId);
         Task<FreelanceJob?> GetById(Guid id);
-        Task<FreelanceJob> Update(FreelanceJob entity); 
+        Task<FreelanceJob> Update(FreelanceJob entity);
+        Task<List<FreelanceJob>> GetByInfluIdAndStatus(Guid influId, FreelanceJobStatus status);
+
+
     }
 }

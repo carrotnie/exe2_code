@@ -237,5 +237,78 @@ namespace Influencerhub.Services.Implement
 
             return response;
         }
+
+        public async Task<ResponseDTO> GetCancelledJobsByInfluId(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _freelanceJobRepository.GetByInfluIdAndStatus(influId, FreelanceJobStatus.Cancel);
+                response.Data = result;
+                response.IsSuccess = true;
+                response.Message = "Lấy danh sách công việc đã huỷ thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetCompletedJobsByInfluId(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _freelanceJobRepository.GetByInfluIdAndStatus(influId, FreelanceJobStatus.Complete);
+                response.Data = result;
+                response.IsSuccess = true;
+                response.Message = "Lấy danh sách công việc đã hoàn thành thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetInProgressJobsByInfluId(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _freelanceJobRepository.GetByInfluIdAndStatus(influId, FreelanceJobStatus.InProgress);
+                response.Data = result;
+                response.IsSuccess = true;
+                response.Message = "Lấy danh sách công việc đang tiến hành thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetPendingJobsByInfluId(Guid influId)
+        {
+            var response = new ResponseDTO();
+            try
+            {
+                var result = await _freelanceJobRepository.GetByInfluIdAndStatus(influId, FreelanceJobStatus.NotYetConfirmed);
+                response.Data = result;
+                response.IsSuccess = true;
+                response.Message = "Lấy danh sách công việc chờ xác nhận thành công";
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
     }
 }

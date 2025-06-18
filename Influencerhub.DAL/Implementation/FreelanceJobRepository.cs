@@ -68,5 +68,15 @@ namespace Influencerhub.DAL.Implementation
             await _context.SaveChangesAsync();
             return entity;
         }
+
+        public async Task<List<FreelanceJob>> GetByInfluIdAndStatus(Guid influId, FreelanceJobStatus status)
+        {
+            return await _context.FreelanceJobs
+                .Where(x => x.FreelanceId == influId && x.status == status)
+                .Include(x => x.Job)
+                .ToListAsync();
+        }
+
+
     }
 }

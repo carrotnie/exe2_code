@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Influencerhub.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a14ff95e3fb40ca0d1c8d474dc3bb1cfb066018")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+401beb461442af0f5e928db37c475056a5939ede")]
 [assembly: System.Reflection.AssemblyProductAttribute("Influencerhub.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Influencerhub.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -48,4 +48,38 @@ public class FreelanceJobsController : ControllerBase
         return Ok(result);
     }
 
+    [AllowAnonymous]
+    [HttpGet("influencer/{influId}/jobs/cancelled")]
+    public async Task<IActionResult> GetCancelledJobs(Guid influId)
+    {
+        var result = await _freelanceJobService.GetCancelledJobsByInfluId(influId);
+        return Ok(result);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("influencer/{influId}/jobs/completed")]
+    public async Task<IActionResult> GetCompletedJobs(Guid influId)
+    {
+        var result = await _freelanceJobService.GetCompletedJobsByInfluId(influId);
+        return Ok(result);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("influencer/{influId}/jobs/in-progress")]
+    public async Task<IActionResult> GetInProgressJobs(Guid influId)
+    {
+        var result = await _freelanceJobService.GetInProgressJobsByInfluId(influId);
+        return Ok(result);
+    }
+
+    [AllowAnonymous]
+    [HttpGet("influencer/{influId}/jobs/pending")]
+    public async Task<IActionResult> GetPendingJobs(Guid influId)
+    {
+        var result = await _freelanceJobService.GetPendingJobsByInfluId(influId);
+        return Ok(result);
+    }
+
+
+
 }

@@ -10,6 +10,10 @@ namespace Influencerhub.Services.Contract
         Task<ResponseDTO> GetApplicantsByJob(Guid jobId);
         Task<ResponseDTO> ApproveInfluencerForJob(Guid freelanceJobId);
         Task<ResponseDTO> ConfirmCompleteJob(Guid freelanceJobId);
+        Task<ResponseDTO> GetCancelledJobsByInfluId(Guid influId);
+        Task<ResponseDTO> GetCompletedJobsByInfluId(Guid influId);
+        Task<ResponseDTO> GetInProgressJobsByInfluId(Guid influId);
+        Task<ResponseDTO> GetPendingJobsByInfluId(Guid influId);
 
     }
 }

@@ -1229,6 +1229,98 @@
         }
       }
     },
+    "/api/freelance-jobs/influencer/{influId}/jobs/cancelled": {
+      "get": {
+        "tags": [
+          "FreelanceJobs"
+        ],
+        "parameters": [
+          {
+            "name": "influId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/freelance-jobs/influencer/{influId}/jobs/completed": {
+      "get": {
+        "tags": [
+          "FreelanceJobs"
+        ],
+        "parameters": [
+          {
+            "name": "influId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/freelance-jobs/influencer/{influId}/jobs/in-progress": {
+      "get": {
+        "tags": [
+          "FreelanceJobs"
+        ],
+        "parameters": [
+          {
+            "name": "influId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/freelance-jobs/influencer/{influId}/jobs/pending": {
+      "get": {
+        "tags": [
+          "FreelanceJobs"
+        ],
+        "parameters": [
+          {
+            "name": "influId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/influ/create": {
       "post": {
         "tags": [

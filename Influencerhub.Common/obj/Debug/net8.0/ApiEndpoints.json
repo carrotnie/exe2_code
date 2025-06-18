@@ -758,6 +758,70 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "GetCancelledJobs",
+    "RelativePath": "api/freelance-jobs/influencer/{influId}/jobs/cancelled",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "GetCompletedJobs",
+    "RelativePath": "api/freelance-jobs/influencer/{influId}/jobs/completed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "GetInProgressJobs",
+    "RelativePath": "api/freelance-jobs/influencer/{influId}/jobs/in-progress",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FreelanceJobsController",
+    "Method": "GetPendingJobs",
+    "RelativePath": "api/freelance-jobs/influencer/{influId}/jobs/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "influId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Influencerhub.API.Controllers.InfluController",
     "Method": "GetAll",
     "RelativePath": "api/influ/all",
