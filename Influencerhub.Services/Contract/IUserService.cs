@@ -11,9 +11,13 @@ namespace Influencerhub.Services.Contract
         Task<ResponseDTO> GenerateNewToken(string refreshToken);
         Task<ResponseDTO> ForgotPassword(ForgotPasswordRequest request);
         Task<ResponseDTO> ResetPassword(ResetPasswordRequest request);
-
-        // cập nhật trạng thái duyệt tài khoản
         Task<ResponseDTO> UpdateUserVerificationStatus(Guid userId, bool isVerified);
         Task<ResponseDTO> UpdateUserBlockedStatus(Guid userId, bool isBlocked);
+
+        Task<ResponseDTO> GetAllUsers();
+        Task<ResponseDTO> GetUsersByVerificationStatus(bool isVerified);
+        Task<ResponseDTO> GetUsersByEmailVerificationStatus(bool isEmailVerified);
+        Task<ResponseDTO> GetBlockedUsers();
+
     }
 }

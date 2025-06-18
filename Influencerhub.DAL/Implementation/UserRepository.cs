@@ -92,5 +92,26 @@ namespace Influencerhub.DAL.Implementation
             return await _context.Businesses.FirstOrDefaultAsync(b => b.UserId == userId);
         }
 
+        public async Task<List<User>> GetAllUsers()
+        {
+            return await _context.Users.Include(u => u.Role).ToListAsync();
+        }
+
+        public async Task<List<User>> GetUsersByVerificationStatus(bool isVerified)
+        {
+            return await _context.Users.Where(u => u.IsVerified == isVerified).Include(u => u.Role).ToListAsync();
+        }
+
+        public async Task<List<User>> GetUsersByEmailVerificationStatus(bool isEmailVerified)
+        {
+            return await _context.Users.Where(u => u.IsEmailVerified == isEmailVerified).Include(u => u.Role).ToListAsync();
+        }
+
+        public async Task<List<User>> GetBlockedUsers()
+        {
+            return await _context.Users.Where(u => u.IsBlocked).Include(u => u.Role).ToListAsync();
+        }
+
+
     }
 }

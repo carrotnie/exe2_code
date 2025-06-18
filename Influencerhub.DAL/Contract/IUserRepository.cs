@@ -17,6 +17,11 @@ namespace Influencerhub.DAL.Contract
         Task<User> UpdateBlockedStatus(Guid userId, bool isBlocked);
         Task<Influ?> GetInfluByUserId(Guid userId);
         Task<Business?> GetBusinessByUserId(Guid userId);
+        Task<List<User>> GetAllUsers();
+        Task<List<User>> GetUsersByVerificationStatus(bool isVerified);
+        Task<List<User>> GetUsersByEmailVerificationStatus(bool isEmailVerified);
+        Task<List<User>> GetBlockedUsers();
+
 
     }
 }

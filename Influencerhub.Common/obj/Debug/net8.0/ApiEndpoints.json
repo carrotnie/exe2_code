@@ -2171,6 +2171,46 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/user/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetBlockedUsers",
+    "RelativePath": "api/user/blocked",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetEmailUnverifiedUsers",
+    "RelativePath": "api/user/email-unverified",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetEmailVerifiedUsers",
+    "RelativePath": "api/user/email-verified",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
     "Method": "ForgotPassword",
     "RelativePath": "api/user/forgot-password",
     "HttpMethod": "POST",
@@ -2267,6 +2307,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetUnverifiedUsers",
+    "RelativePath": "api/user/unverified",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.UserController",
+    "Method": "GetVerifiedUsers",
+    "RelativePath": "api/user/verified",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

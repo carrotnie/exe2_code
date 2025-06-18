@@ -58,5 +58,53 @@ namespace Influencerhub.API.Controllers
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var result = await _userService.GetAllUsers();
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("unverified")]
+        public async Task<IActionResult> GetUnverifiedUsers()
+        {
+            var result = await _userService.GetUsersByVerificationStatus(false);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("verified")]
+        public async Task<IActionResult> GetVerifiedUsers()
+        {
+            var result = await _userService.GetUsersByVerificationStatus(true);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("email-unverified")]
+        public async Task<IActionResult> GetEmailUnverifiedUsers()
+        {
+            var result = await _userService.GetUsersByEmailVerificationStatus(false);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("email-verified")]
+        public async Task<IActionResult> GetEmailVerifiedUsers()
+        {
+            var result = await _userService.GetUsersByEmailVerificationStatus(true);
+            return Ok(result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("blocked")]
+        public async Task<IActionResult> GetBlockedUsers()
+        {
+            var result = await _userService.GetBlockedUsers();
+            return Ok(result);
+        }
+
     }
 }

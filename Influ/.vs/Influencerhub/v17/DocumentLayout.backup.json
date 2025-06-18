@@ -3,42 +3,25 @@
   "WorkspaceRootPath": "D:\\EXE2\\Influ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|d:\\exe2\\influ\\enum\\freelancejobstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|solutionrelative:enum\\freelancejobstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|d:\\exe2\\influ\\enum\\jobstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375E73AF-562D-4D32-B9F7-FE65A78CDF5C}|Influencerhub.Common.csproj|solutionrelative:enum\\jobstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\freelancejobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\freelancejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\ifreelancejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\freelancejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\ifreelancejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\influ.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\freelancejob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\freelancefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\data\\influencerhubdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +31,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -60,158 +43,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JobStatus.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influ\\Enum\\JobStatus.cs",
-              "RelativeDocumentMoniker": "Enum\\JobStatus.cs",
-              "ToolTip": "D:\\EXE2\\Influ\\Enum\\JobStatus.cs",
-              "RelativeToolTip": "Enum\\JobStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:45:37.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FreelanceJobStatus.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influ\\Enum\\FreelanceJobStatus.cs",
-              "RelativeDocumentMoniker": "Enum\\FreelanceJobStatus.cs",
-              "ToolTip": "D:\\EXE2\\Influ\\Enum\\FreelanceJobStatus.cs",
-              "RelativeToolTip": "Enum\\FreelanceJobStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:24:44.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FreelanceJobService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
-              "ViewState": "AgIAABgBAAAAAAAAAADwv/4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:24:23.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IFreelanceJobService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:24:13.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FreelanceJobsController.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\FreelanceJobsController.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\FreelanceJobsController.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\FreelanceJobsController.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\FreelanceJobsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:23:34.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FreelanceJobRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\FreelanceJobRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\FreelanceJobRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\FreelanceJobRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\FreelanceJobRepository.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAzwE8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:24:04.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IFreelanceJobRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IFreelanceJobRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IFreelanceJobRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IFreelanceJobRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IFreelanceJobRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:23:57.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Job.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Job.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Job.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Job.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Job.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAswBUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:22:26.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Influ.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Influ.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Influ.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Influ.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Influ.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:22:21.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FreelanceJob.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceJob.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\FreelanceJob.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceJob.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\FreelanceJob.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:22:12.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FreelanceField.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceField.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\FreelanceField.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\FreelanceField.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\FreelanceField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:22:12.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "InfluencerhubDBContext.cs",
               "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
               "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
               "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
               "RelativeToolTip": "..\\Influencerhub.DAL\\Data\\InfluencerhubDBContext.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAADwvyMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvycAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T09:21:34.591Z",
+              "WhenOpened": "2025-06-18T10:28:46.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\UserService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\UserService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\UserService.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAYwC8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:25:09.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IUserService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IUserService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IUserService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:25:01.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\User.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\User.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\User.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:24:39.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\UserRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\UserRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\UserRepository.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:24:30.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IUserRepository.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IUserRepository.cs",
+              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:24:21.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\UserController.cs",
+              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAYwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:23:49.066Z",
               "EditorCaption": ""
             }
           ]

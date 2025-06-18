@@ -266,6 +266,42 @@ namespace Influencerhub.Services.Implementation
             return response;
         }
 
+        public async Task<ResponseDTO> GetAllUsers()
+        {
+            var response = new ResponseDTO();
+            var users = await _userRepository.GetAllUsers();
+            response.IsSuccess = true;
+            response.Data = users;
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetUsersByVerificationStatus(bool isVerified)
+        {
+            var response = new ResponseDTO();
+            var users = await _userRepository.GetUsersByVerificationStatus(isVerified);
+            response.IsSuccess = true;
+            response.Data = users;
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetUsersByEmailVerificationStatus(bool isEmailVerified)
+        {
+            var response = new ResponseDTO();
+            var users = await _userRepository.GetUsersByEmailVerificationStatus(isEmailVerified);
+            response.IsSuccess = true;
+            response.Data = users;
+            return response;
+        }
+
+        public async Task<ResponseDTO> GetBlockedUsers()
+        {
+            var response = new ResponseDTO();
+            var users = await _userRepository.GetBlockedUsers();
+            response.IsSuccess = true;
+            response.Data = users;
+            return response;
+        }
+
 
     }
 }
