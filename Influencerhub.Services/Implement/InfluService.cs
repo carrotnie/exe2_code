@@ -314,7 +314,7 @@ namespace Influencerhub.Services.Implementation
             var response = new ResponseDTO();
             try
             {
-                var influ = await _influRepository.GetByUserId(userId);
+                var influ = await _context.Influs.FirstOrDefaultAsync(i => i.UserId == userId);
                 if (influ == null)
                 {
                     response.IsSuccess = false;
@@ -322,8 +322,33 @@ namespace Influencerhub.Services.Implementation
                     return response;
                 }
 
+                var user = await _userRepository.GetById(userId);
+                var links = await _context.Links
+                    .Where(l => l.InfluId == influ.InfluId)
+                    .Select(l => l.Linkmxh!)
+                    .ToListAsync();
+
+                var dto = new InfluDetailDTO
+                {
+                    InfluId = influ.InfluId,
+                    UserId = influ.UserId,
+                    Name = influ.Name,
+                    Gender = influ.Gender,
+                    NickName = influ.NickName,
+                    DateOfBirth = influ.DateOfBirth,
+                    PhoneNumber = influ.PhoneNumber,
+                    Area = influ.Area,
+                    Follower = influ.Follower,
+                    Bio = influ.Bio,
+                    CCCD = influ.CCCD,
+                    LinkImage = influ.LinkImage,
+                    Portfolio_link = influ.Portfolio_link,
+                    Email = user?.Email ?? string.Empty,
+                    Linkmxh = links
+                };
+
                 response.IsSuccess = true;
-                response.Data = influ;
+                response.Data = dto;
                 response.Message = "Lấy dữ liệu Influencer thành công.";
             }
             catch (Exception ex)
@@ -333,6 +358,7 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
+
 
     }
 }

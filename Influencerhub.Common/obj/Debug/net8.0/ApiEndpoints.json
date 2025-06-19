@@ -1391,6 +1391,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipController",
+    "Method": "GetAll",
+    "RelativePath": "api/membership/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/membership/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Influencerhub.API.Controllers.MembershipRegistrationController",
     "Method": "RegisterMembership",
     "RelativePath": "api/MembershipRegistration/register-membership",

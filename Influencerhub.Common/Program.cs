@@ -90,6 +90,7 @@ builder.Services.AddScoped<IFreelanceJobRepository, FreelanceJobRepository>();
 builder.Services.AddScoped<IMembershipTypeRepository, MembershipTypeRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IMembershipRepository, MembershipRepository>();
 
 // Đăng ký Service
 builder.Services.AddScoped<IUserService, UserService>();
@@ -106,6 +107,7 @@ builder.Services.AddScoped<IMembershipTypeService, MembershipTypeService>();
 builder.Services.AddScoped<IMembershipRegistrationService, MembershipRegistrationService>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IMembershipService, MembershipService>();
 
 // Đăng ký chat services
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
