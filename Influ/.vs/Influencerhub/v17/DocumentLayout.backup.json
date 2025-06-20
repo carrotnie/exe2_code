@@ -3,31 +3,10 @@
   "WorkspaceRootPath": "D:\\EXE2\\Influ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\freelancejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\membershipcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\membershipregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04F22C34-7E7C-4B56-A507-4AF0019A74C3}|..\\Influencerhub.Common\\Influencerhub.API.csproj|d:\\exe2\\influencerhub.common\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\implement\\membershipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\imembershipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\implementation\\membershiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\contract\\imembershiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA186EA-9150-4E25-B0AB-6C51EA402889}|..\\Influencerhub.DAL\\Influencerhub.DAL.csproj|d:\\exe2\\influencerhub.dal\\models\\membership.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7A38E1D-F753-4C86-ACFF-548E50FFBD51}|..\\Influencerhub.Services\\Influencerhub.Services.csproj|d:\\exe2\\influencerhub.services\\contract\\ifreelancejobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +16,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,123 +24,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Program.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Program.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Program.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Program.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAG0AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:39:02.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MembershipRegistrationController.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\MembershipRegistrationController.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\MembershipRegistrationController.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\MembershipRegistrationController.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\MembershipRegistrationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:36:59.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:36:48.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MembershipController.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Common\\Controllers\\MembershipController.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Common\\Controllers\\MembershipController.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Common\\Controllers\\MembershipController.cs",
-              "RelativeToolTip": "..\\Influencerhub.Common\\Controllers\\MembershipController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Title": "IFreelanceJobService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IFreelanceJobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:36:36.915Z",
+              "WhenOpened": "2025-06-20T11:38:42.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MembershipService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\MembershipService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\MembershipService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\MembershipService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\MembershipService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FreelanceJobService.cs",
+              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
+              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Implement\\FreelanceJobService.cs",
+              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Implement\\FreelanceJobService.cs*",
+              "RelativeToolTip": "..\\Influencerhub.Services\\Implement\\FreelanceJobService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:35:06.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMembershipService.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.Services\\Contract\\IMembershipService.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.Services\\Contract\\IMembershipService.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.Services\\Contract\\IMembershipService.cs",
-              "RelativeToolTip": "..\\Influencerhub.Services\\Contract\\IMembershipService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:34:49.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MembershipRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\MembershipRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Implementation\\MembershipRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Implementation\\MembershipRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Implementation\\MembershipRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:34:23.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IMembershipRepository.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IMembershipRepository.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Contract\\IMembershipRepository.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Contract\\IMembershipRepository.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Contract\\IMembershipRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:34:00.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Membership.cs",
-              "DocumentMoniker": "D:\\EXE2\\Influencerhub.DAL\\Models\\Membership.cs",
-              "RelativeDocumentMoniker": "..\\Influencerhub.DAL\\Models\\Membership.cs",
-              "ToolTip": "D:\\EXE2\\Influencerhub.DAL\\Models\\Membership.cs",
-              "RelativeToolTip": "..\\Influencerhub.DAL\\Models\\Membership.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T12:32:03.499Z",
+              "WhenOpened": "2025-06-20T11:13:50.933Z",
               "EditorCaption": ""
             }
           ]

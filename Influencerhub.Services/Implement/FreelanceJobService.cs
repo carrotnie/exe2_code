@@ -32,7 +32,7 @@ namespace Influencerhub.Services.Implement
             var response = new ResponseDTO();
             try
             {
-                // Check đã apply chưa
+                // 1. Check đã apply chưa
                 var existed = await _freelanceJobRepository.GetByJobAndFreelance(jobId, freelanceId);
                 if (existed != null)
                 {
@@ -41,7 +41,7 @@ namespace Influencerhub.Services.Implement
                     return response;
                 }
 
-                // Lấy thông tin job
+                // 2. Lấy thông tin job
                 var job = await _jobRepository.GetJobById(jobId);
                 if (job == null)
                 {
@@ -50,7 +50,6 @@ namespace Influencerhub.Services.Implement
                     return response;
                 }
 
-                // Chỉ cho apply khi Job còn Available
                 if (job.Status != JobStatus.Available)
                 {
                     response.IsSuccess = false;
@@ -58,6 +57,25 @@ namespace Influencerhub.Services.Implement
                     return response;
                 }
 
+                // ✅ 3. Kiểm tra số lượng job đã apply bị trùng thời gian
+                var startTime = job.StartTime;
+                var endTime = job.EndTime;
+
+                var overlappingJobs = await _context.FreelanceJobs
+                    .Where(f => f.FreelanceId == freelanceId &&
+                                f.status != FreelanceJobStatus.Cancel &&
+                                f.StartTime != null && f.EndTime != null &&
+                                !(f.EndTime < startTime || f.StartTime > endTime)) // check giao nhau
+                    .CountAsync();
+
+                if (overlappingJobs >= 3)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Bạn đã có job trong khoảng thời gian này (tối đa là 3 job được trùng thời gian)";
+                    return response;
+                }
+
+                // 4. Apply job
                 var entity = new FreelanceJob
                 {
                     Id = Guid.NewGuid(),
@@ -79,8 +97,10 @@ namespace Influencerhub.Services.Implement
                 response.IsSuccess = false;
                 response.Message = ex.Message;
             }
+
             return response;
         }
+
 
         public async Task<ResponseDTO> GetApplicantsByJob(Guid jobId)
         {

@@ -1,4 +1,5 @@
 ﻿using Influencerhub.Common.DTO;
+using Influencerhub.Common.Enum;
 using System;
 using System.Threading.Tasks;
 
