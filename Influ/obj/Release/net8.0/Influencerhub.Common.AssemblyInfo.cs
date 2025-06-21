@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Influencerhub.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6b4e74826e7e15113975001aaec2e8efe795dc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e27e25f1a5b8695bbcbbf82b60ba52c55f2ce615")]
 [assembly: System.Reflection.AssemblyProductAttribute("Influencerhub.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Influencerhub.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

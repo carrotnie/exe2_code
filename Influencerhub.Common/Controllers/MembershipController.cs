@@ -17,7 +17,7 @@ namespace Influencerhub.API.Controllers
             _membershipService = membershipService;
         }
 
-        [Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetByUserId(Guid userId)
         {
