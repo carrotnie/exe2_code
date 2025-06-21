@@ -36,8 +36,8 @@ namespace Influencerhub.Services.Implement
                     ConversationName = name,
                     IsGroup = isGroup ? isGroup : true,
                     UserID = creatorId,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow,
+                    CreatedAt = DateTime.UtcNow.AddHours(7),
+                    UpdatedAt = DateTime.UtcNow.AddHours(7),
                 };
                 await _conversationRepository.Insert(newConversation);
                 await _unitOfWork.SaveChangeAsync();

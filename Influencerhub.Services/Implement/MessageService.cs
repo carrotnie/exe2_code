@@ -122,6 +122,7 @@ namespace Influencerhub.Services.Implement
                     ConversationID = conversationId,
                     Content = content,
                     Status = MessageStatus.SENT,
+                    SentAt = DateTime.UtcNow.AddHours(7)
                 };
 
                 await _messageRepository.Insert(message);
