@@ -9,5 +9,7 @@ namespace Influencerhub.DAL.Contract
     {
         Task<Membership?> GetByUserId(Guid userId);
         Task<List<Membership>> GetAll();
+        Task<List<Membership>> GetInfluencerMemberships();
+        Task<List<Membership>> GetBusinessMemberships();
     }
 }

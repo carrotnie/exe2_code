@@ -2219,6 +2219,30 @@
         }
       }
     },
+    "/api/membership/influencers": {
+      "get": {
+        "tags": [
+          "Membership"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/membership/businesses": {
+      "get": {
+        "tags": [
+          "Membership"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/MembershipRegistration/register-membership": {
       "post": {
         "tags": [

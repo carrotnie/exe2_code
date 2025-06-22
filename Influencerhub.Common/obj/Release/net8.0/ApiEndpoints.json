@@ -1402,6 +1402,26 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.MembershipController",
+    "Method": "GetBusinessMemberships",
+    "RelativePath": "api/membership/businesses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipController",
+    "Method": "GetInfluencerMemberships",
+    "RelativePath": "api/membership/influencers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.MembershipController",
     "Method": "GetByUserId",
     "RelativePath": "api/membership/user/{userId}",
     "HttpMethod": "GET",

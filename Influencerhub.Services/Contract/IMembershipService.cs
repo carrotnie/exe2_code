@@ -8,5 +8,7 @@ namespace Influencerhub.Services.Contract
     {
         Task<ResponseDTO> GetByUserId(Guid userId);
         Task<ResponseDTO> GetAll();
+        Task<ResponseDTO> GetInfluencerMemberships();
+        Task<ResponseDTO> GetBusinessMemberships();
     }
 }

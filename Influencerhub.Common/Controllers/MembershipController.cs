@@ -32,5 +32,21 @@ namespace Influencerhub.API.Controllers
             var result = await _membershipService.GetAll();
             return Ok(result);
         }
+
+        [AllowAnonymous]
+        [HttpGet("influencers")]
+        public async Task<IActionResult> GetInfluencerMemberships()
+        {
+            var result = await _membershipService.GetInfluencerMemberships();
+            return Ok(result);
+        }
+
+        [AllowAnonymous]
+        [HttpGet("businesses")]
+        public async Task<IActionResult> GetBusinessMemberships()
+        {
+            var result = await _membershipService.GetBusinessMemberships();
+            return Ok(result);
+        }
     }
 }
