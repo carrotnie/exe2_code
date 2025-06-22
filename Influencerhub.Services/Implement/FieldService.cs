@@ -154,7 +154,6 @@ namespace Influencerhub.Services.Implementation
             var response = new ResponseDTO();
             try
             {
-                // Lấy tất cả các BusinessField của business này
                 var businessFields = await _businessFieldRepository.GetByBusinessIdAsync(businessId);
                 if (businessFields == null || businessFields.Count == 0)
                 {
@@ -164,18 +163,24 @@ namespace Influencerhub.Services.Implementation
                     return response;
                 }
 
-                // Lấy danh sách fieldId từ BusinessField, loại bỏ null và ép sang Guid
                 var fieldIds = businessFields
                     .Where(bf => bf.FieldId.HasValue)
                     .Select(bf => bf.FieldId.Value)
-                    .Distinct()
                     .ToList();
 
-                // Lấy thông tin field tương ứng
                 var fields = await _fieldRepository.GetByIdsAsync(fieldIds);
 
+                var result = (from bf in businessFields
+                              join f in fields on bf.FieldId equals f.Id
+                              select new BusinessFieldInfoDTO
+                              {
+                                  BusinessFieldId = bf.Id,
+                                  FieldId = f.Id,
+                                  FieldName = f.Name
+                              }).ToList();
+
                 response.IsSuccess = true;
-                response.Data = fields;
+                response.Data = result;
                 response.Message = "Lấy danh sách lĩnh vực của business thành công!";
             }
             catch (Exception ex)
@@ -185,6 +190,7 @@ namespace Influencerhub.Services.Implementation
             }
             return response;
         }
+
 
         public async Task<ResponseDTO> GetFieldsByInfluId(Guid influId)
         {
