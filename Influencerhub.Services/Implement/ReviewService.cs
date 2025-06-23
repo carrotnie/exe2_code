@@ -99,7 +99,7 @@ public class ReviewService : IReviewService
         var response = new ResponseDTO();
         try
         {
-            // 1. Kiểm tra membership
+            // 1. Kiểm tra membership của người gọi
             var membership = await _context.Memberships
                 .Where(m => m.UserId == userId)
                 .OrderByDescending(m => m.EndDate)
@@ -111,17 +111,14 @@ public class ReviewService : IReviewService
             if (membership.EndDate <= DateTime.UtcNow)
                 throw new Exception($"Gói thành viên đã hết hạn từ {membership.EndDate:dd/MM/yyyy HH:mm:ss}.");
 
-            // 2. Lấy InfluId tương ứng với UserId
-            var influ = await _context.Influs.FirstOrDefaultAsync(i => i.UserId == userId);
-            if (influ == null)
-                throw new Exception("Không tìm thấy Influencer cho UserId này.");
-
-            // 3. Lấy review theo InfluId
-            var reviews = await _reviewRepo.GetReviewsByInfluIdAsync(influ.InfluId);
+            // 2. Lấy tất cả feedback từ các review dạng Business -> Influ
+            var reviews = await _context.Reviews
+                .Where(r => r.Type == ReviewType.BusinessToInflu)
+                .ToListAsync();
 
             response.IsSuccess = true;
             response.Data = reviews;
-            response.Message = "Lấy review của KOL thành công!";
+            response.Message = "Lấy tất cả review của KOL thành công!";
         }
         catch (Exception ex)
         {
@@ -130,6 +127,7 @@ public class ReviewService : IReviewService
         }
         return response;
     }
+
 
 
 
@@ -139,7 +137,7 @@ public class ReviewService : IReviewService
         var response = new ResponseDTO();
         try
         {
-            // 1. Kiểm tra membership
+            // 1. Kiểm tra membership của người gọi
             var membership = await _context.Memberships
                 .Where(m => m.UserId == userId)
                 .OrderByDescending(m => m.EndDate)
@@ -151,17 +149,14 @@ public class ReviewService : IReviewService
             if (membership.EndDate <= DateTime.UtcNow)
                 throw new Exception($"Gói thành viên đã hết hạn từ {membership.EndDate:dd/MM/yyyy HH:mm:ss}.");
 
-            // 2. Lấy BusinessId tương ứng với UserId
-            var business = await _context.Businesses.FirstOrDefaultAsync(b => b.UserId == userId);
-            if (business == null)
-                throw new Exception("Không tìm thấy Business cho UserId này.");
-
-            // 3. Lấy review theo BusinessId
-            var reviews = await _reviewRepo.GetReviewsByBusinessIdAsync(business.Id);
+            // 2. Lấy tất cả feedback từ các review dạng Influ -> Business
+            var reviews = await _context.Reviews
+                .Where(r => r.Type == ReviewType.InfluToBusiness)
+                .ToListAsync();
 
             response.IsSuccess = true;
             response.Data = reviews;
-            response.Message = "Lấy review của business thành công!";
+            response.Message = "Lấy tất cả review của business thành công!";
         }
         catch (Exception ex)
         {
@@ -172,21 +167,15 @@ public class ReviewService : IReviewService
     }
 
 
-
-
-    // Rating không kiểm tra membership
-    public async Task<ResponseDTO> GetRatingList(Guid userId, bool isBusiness)
+    public async Task<ResponseDTO> GetRatingOfAllBusiness()
     {
         var response = new ResponseDTO();
         try
         {
-            List<Review> reviews;
-            if (isBusiness)
-                reviews = await _reviewRepo.GetReviewsByBusinessIdAsync(userId);
-            else
-                reviews = await _reviewRepo.GetReviewsByInfluIdAsync(userId);
+            var reviews = await _context.Reviews
+                .Where(r => r.Type == ReviewType.InfluToBusiness)
+                .ToListAsync();
 
-            // Lấy danh sách chỉ có rating và jobId/feedback nếu cần
             var ratingList = reviews.Select(r => new
             {
                 r.Id,
@@ -198,7 +187,7 @@ public class ReviewService : IReviewService
 
             response.IsSuccess = true;
             response.Data = ratingList;
-            response.Message = "Lấy danh sách rating thành công!";
+            response.Message = "Lấy danh sách rating của tất cả business thành công!";
         }
         catch (Exception ex)
         {
@@ -207,6 +196,38 @@ public class ReviewService : IReviewService
         }
         return response;
     }
+
+    public async Task<ResponseDTO> GetRatingOfAllInflu()
+    {
+        var response = new ResponseDTO();
+        try
+        {
+            var reviews = await _context.Reviews
+                .Where(r => r.Type == ReviewType.BusinessToInflu)
+                .ToListAsync();
+
+            var ratingList = reviews.Select(r => new
+            {
+                r.Id,
+                r.JobId,
+                r.Feedback,
+                r.Rating,
+                r.Type
+            }).ToList();
+
+            response.IsSuccess = true;
+            response.Data = ratingList;
+            response.Message = "Lấy danh sách rating của tất cả influencer thành công!";
+        }
+        catch (Exception ex)
+        {
+            response.IsSuccess = false;
+            response.Message = ex.Message;
+        }
+        return response;
+    }
+
+
 
 
 }

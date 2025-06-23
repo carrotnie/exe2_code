@@ -2031,23 +2031,32 @@
   },
   {
     "ContainingType": "Influencerhub.API.Controllers.ReviewController",
-    "Method": "GetRatingList",
-    "RelativePath": "api/review/rating-list",
+    "Method": "GetRatingOfAllBusiness",
+    "RelativePath": "api/review/rating-of-business",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
+    "Parameters": [],
+    "ReturnTypes": [
       {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "isBusiness",
-        "Type": "System.Boolean",
-        "IsRequired": false
+        "Type": "Influencerhub.Common.DTO.ResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
+    ]
+  },
+  {
+    "ContainingType": "Influencerhub.API.Controllers.ReviewController",
+    "Method": "GetRatingOfAllInflu",
+    "RelativePath": "api/review/rating-of-influ",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "Influencerhub.Common.DTO.ResponseDTO",

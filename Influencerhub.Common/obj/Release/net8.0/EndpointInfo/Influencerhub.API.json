@@ -3248,28 +3248,39 @@
         }
       }
     },
-    "/api/review/rating-list": {
+    "/api/review/rating-of-business": {
       "get": {
         "tags": [
           "Review"
         ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "isBusiness",
-            "in": "query",
-            "schema": {
-              "type": "boolean"
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDTO"
+                }
+              }
             }
           }
+        }
+      }
+    },
+    "/api/review/rating-of-influ": {
+      "get": {
+        "tags": [
+          "Review"
         ],
         "responses": {
           "200": {

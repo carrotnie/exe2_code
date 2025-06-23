@@ -8,5 +8,7 @@ public interface IReviewService
     Task<ResponseDTO> InfluReviewBusiness(Guid freelanceJobId, string feedback, float rating);
     Task<ResponseDTO> GetReviewOfInflu(Guid userId);
     Task<ResponseDTO> GetReviewOfBusiness(Guid userId);
-    Task<ResponseDTO> GetRatingList(Guid userId, bool isBusiness);
+    Task<ResponseDTO> GetRatingOfAllBusiness();
+    Task<ResponseDTO> GetRatingOfAllInflu();
+
 }

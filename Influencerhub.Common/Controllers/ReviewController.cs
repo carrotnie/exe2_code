@@ -47,11 +47,18 @@ namespace Influencerhub.API.Controllers
         }
 
         [AllowAnonymous]
-        // Lấy tất cả rating (không kiểm tra membership)
-        [HttpGet("rating-list")]
-        public async Task<ResponseDTO> GetRatingList([FromRoute] Guid userId, [FromQuery] bool isBusiness)
+        [HttpGet("rating-of-business")]
+        public async Task<ResponseDTO> GetRatingOfAllBusiness()
         {
-            return await _reviewService.GetRatingList(userId, isBusiness);
+            return await _reviewService.GetRatingOfAllBusiness();
         }
+
+        [AllowAnonymous]
+        [HttpGet("rating-of-influ")]
+        public async Task<ResponseDTO> GetRatingOfAllInflu()
+        {
+            return await _reviewService.GetRatingOfAllInflu();
+        }
+
     }
 }
