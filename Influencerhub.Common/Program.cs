@@ -14,7 +14,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// JWT AUTH
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -22,7 +22,6 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    Console.WriteLine("Key when validating: " + builder.Configuration["JwtSettings:SecretKey"]);
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = false,
@@ -39,28 +38,25 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost", policy =>
-        policy.WithOrigins("http://localhost:5173")
+    options.AddPolicy("AllowFrontend", policy =>
+        policy.WithOrigins("https://influencerhub.id.vn")
               .AllowAnyMethod()
               .AllowAnyHeader());
 });
 
-// Thêm API Controllers
 builder.Services.AddControllers();
 
-// Thêm Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Influencerhub API", Version = "v1" });
-    // Nếu cần cấu hình Bearer token JWT trong Swagger:
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Just paste your token below.",
         Name = "Authorization",
         In = ParameterLocation.Header,
-        Type = SecuritySchemeType.Http,    
-        Scheme = "bearer",                 
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
         BearerFormat = "JWT"
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement {
@@ -75,10 +71,10 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// Đăng ký DbContext
+// DbContext
 builder.Services.AddDbContext<InfluencerhubDBContext>();
 
-// Đăng ký Repository
+// Repository
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IInfluRepository, InfluRepository>();
 builder.Services.AddScoped<IFieldRepository, FieldRepository>();
@@ -92,7 +88,7 @@ builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 builder.Services.AddScoped<IMembershipRepository, MembershipRepository>();
 
-// Đăng ký Service
+// Service
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IInfluService, InfluService>();
 builder.Services.AddScoped<IJWTService, JWTService>();
@@ -109,7 +105,7 @@ builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IMembershipService, MembershipService>();
 
-// Đăng ký chat services
+// Chat services
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IConversationPartnersService, ConversationPartnersService>();
@@ -119,13 +115,31 @@ builder.Services.AddScoped<IPartnerShipService, PartnerShipService>();
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
 builder.Services.AddScoped<IHubService, HubService>();
 
-// Đăng ký SignalR
+// SignalR
 builder.Services.AddSignalR();
 
-// 2. BUILD APP
 var app = builder.Build();
 
-// 3. CONFIGURE MIDDLEWARE PIPELINE
+// REDIRECT ROOT (và các route không phải API/Swagger/static) về FE
+app.Use(async (context, next) =>
+{
+    // Cho phép /swagger, /api, /signalr, hoặc file tĩnh
+    var path = context.Request.Path.Value?.ToLower();
+    if (
+        path == "/" ||
+        (path != null &&
+            !path.StartsWith("/api")
+            && !path.StartsWith("/swagger")
+            && !path.StartsWith("/signalr")
+            && !System.IO.Path.HasExtension(path))
+       )
+    {
+        // Redirect về FE
+        context.Response.Redirect("https://influencerhub.id.vn");
+        return;
+    }
+    await next();
+});
 
 app.UseRouting();
 app.UseSwagger();
@@ -133,13 +147,9 @@ app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Influencerhub API v1");
 });
-
 app.UseStaticFiles();
-
-app.UseCors("AllowLocalhost");
-
+app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
