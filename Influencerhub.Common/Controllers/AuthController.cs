@@ -23,7 +23,7 @@ namespace Influencerhub.API.Controllers
             if (response.IsSuccess)
             {
                 // Redirect về trang báo xác thực thành công (có thể là FE SPA, hoặc 1 trang tĩnh)
-                return Redirect("https://www.facebook.com/"); // FE tự làm trang này
+                return Redirect("https://influencerhub.id.vn/success"); // FE tự làm trang này
             }
             // Redirect về trang báo thất bại
             return Redirect("https://yourdomain.com/email-verify-failed");

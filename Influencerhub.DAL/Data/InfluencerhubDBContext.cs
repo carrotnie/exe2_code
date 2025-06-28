@@ -39,7 +39,7 @@ namespace Influencerhub.DAL.Data
         {
             //optionsBuilder.UseSqlServer("server=DESKTOP-J0IBK4L\\TUT;database=InfluencerhubDB;uid=sa;pwd=12345;TrustServerCertificate=True;MultipleActiveResultSets=True;");
 
-            optionsBuilder.UseSqlServer("Server=tcp:influencerhub.database.windows.net,1433;Initial Catalog=Influencerhub;Persist Security Info=False;User ID=sa-admin;Password=12345678a@;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer("Server=tcp:influencerhub1.database.windows.net,1433;Initial Catalog=influencerhub;Persist Security Info=False;User ID=sa-admin;Password=12345678a@;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;");
 
             //optionsBuilder.UseSqlServer("server=ALOLINNE;database=InfluencerhubDB;uid=sa;pwd=123;TrustServerCertificate=True;MultipleActiveResultSets=True;");
         }
