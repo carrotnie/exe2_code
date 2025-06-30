@@ -37,7 +37,7 @@ namespace Influencerhub.Services.Implementation
                 await _userRepository.Update(user);
 
                 // 2. Đọc cấu hình gửi mail
-                var baseUrl = _configuration["BaseUrl"];
+                var baseUrl = _configuration["BaseUrl"]; 
                 var mailSettings = _configuration.GetSection("MailSettings");
                 var fromEmail = mailSettings["FromEmail"];
                 var fromName = mailSettings["FromName"];
@@ -84,7 +84,6 @@ namespace Influencerhub.Services.Implementation
             {
                 // Ghi log chi tiết để kiểm tra lỗi khi gửi email
                 Console.WriteLine("[EmailVerification][Lỗi gửi mail xác thực]: " + ex);
-                // Có thể throw hoặc trả về response riêng nếu muốn không rollback, tuỳ dự án
                 throw;
             }
         }
